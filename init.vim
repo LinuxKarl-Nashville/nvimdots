@@ -14,6 +14,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'sharkdp/fd'
   Plug 'BurntSushi/ripgrep'
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'ryanoasis/vim-devicons'
   Plug 'kyazdani42/nvim-web-devicons'
   Plug 'adelarsq/vim-devicons-emoji'
@@ -40,17 +41,15 @@ call plug#begin('~/.config/nvim/plugged')
 call plug#end()
 
 " time to configure our freshly loaded plugins
+let g:python_host_prog = '/data/data/com.termux/files/usr/bin/python'
+let g:python3_host_prog = '/data/data/com.termux/files/usr/bin/python3'
 source ~/.config/nvim/tscope_setup.lua
-if (has("termguicolors")) 
-  set termguicolors 
-endif
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#lsp#handler_enabled = v:true
 let g:deoplete#lsp#use_icons_for_candidates = v:true
 let g:airline_powerline_fonts = 1
 let g:airline_extensions = ['tabline', 'fzf']
 let g:airline_theme = 'onedark'
-colorscheme onedark
 let NERDTreeShowHidden = 1
 call deoplete#custom#var('terminal', 'require_same_tab', v:false)
 
@@ -65,6 +64,10 @@ nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " standard vim config
+colorscheme onedark
+if (has("termguicolors")) 
+  set termguicolors 
+endif
 set tabstop=4
 set shiftwidth=4
 set expandtab
