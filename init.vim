@@ -19,8 +19,8 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'adelarsq/vim-devicons-emoji'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
+  Plug 'Shougo/deoplete.nvim'
   Plug 'preservim/nerdtree'
-  Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
   Plug 'deoplete-plugins/deoplete-jedi'
   Plug 'deoplete-plugins/deoplete-terminal'
   Plug 'neovim/nvim-lspconfig'
@@ -34,7 +34,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'nvim-telescope/telescope-symbols.nvim'
   Plug 'kkharji/sqlite.lua'
   Plug 'nvim-telescope/telescope-frecency.nvim'
-  Plug 'mhinz/vim-startify'
+  "Plug 'mhinz/vim-startify'
   Plug 'guns/xterm-color-table.vim'
 
 call plug#end()
@@ -43,7 +43,7 @@ call plug#end()
 source ~/.config/nvim/tscope_setup.lua
 if (has("termguicolors")) 
   set termguicolors 
-endif 
+endif
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#lsp#handler_enabled = v:true
 let g:deoplete#lsp#use_icons_for_candidates = v:true

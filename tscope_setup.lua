@@ -30,6 +30,11 @@ require('telescope').setup {
         toggoe_hidden = true,
     },
   },
+  builtin = {
+    symbols = {
+      sources = {'emoji', 'kaomoji', 'gitmoji'},
+    },
+  },
 }
 require('telescope').load_extension('fzf')
 require('telescope').load_extension('file_browser')
