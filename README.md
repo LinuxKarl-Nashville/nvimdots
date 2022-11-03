@@ -1,1 +1,2 @@
 # nvimdots
+My neovim config
