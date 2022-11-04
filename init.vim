@@ -42,14 +42,10 @@ call plug#begin(stdpath('config').'/plugged')
 call plug#end()
 
 " time to configure our freshly loaded plugins
-<<<<<<< HEAD
-source ~/.config/nvim/tscope_setup.lua
-=======
 "let g:python_host_prog = '/data/data/com.termux/files/usr/bin/python'
 "let g:python3_host_prog = '/data/data/com.termux/files/usr/bin/python3'
 let tsetup = fnameescape(stdpath('config').'/tscope_setup.lua')
 execute 'luafile ' .. tsetup
->>>>>>> f1df144 (Added usage of stdpath, working on cross os friendliness...)
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#lsp#handler_enabled = v:true
 let g:deoplete#lsp#use_icons_for_candidates = v:true
