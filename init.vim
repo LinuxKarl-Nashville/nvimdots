@@ -41,8 +41,6 @@ call plug#begin('~/.config/nvim/plugged')
 call plug#end()
 
 " time to configure our freshly loaded plugins
-let g:python_host_prog = '/data/data/com.termux/files/usr/bin/python'
-let g:python3_host_prog = '/data/data/com.termux/files/usr/bin/python3'
 source ~/.config/nvim/tscope_setup.lua
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#lsp#handler_enabled = v:true
